@@ -1,5 +1,5 @@
 {
-  description = "Kanto Expansion Pack Romhack";
+  description = "Johto Expansion Pack Romhack";
   inputs = {
     nixpkgs.url = github:NixOS/nixpkgs/nixos-23.05;
     flake-utils.url = github:numtide/flake-utils;
