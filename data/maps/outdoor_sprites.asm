@@ -43,6 +43,7 @@ OutdoorSprites:
 	dw SavoyCityGroupSprites
 	dw CoralCityGroupSprites
 	dw RuddyTownGroupSprites
+	dw OchreTownGroupSprites
 	dw SunglowCityGroupSprites
 	dw BlueForestGroupSprites
 	dw AventurineCityGroupSprites
@@ -338,6 +339,7 @@ BlueForestGroupSprites: 	; Will have its own thing eventually
 SunglowCityGroupSprites:  	; Ditto
 AventurineCityGroupSprites:	; Ditto
 WhiteCityGroupSprites:  	; Ditto
+OchreTownGroupSprites:		; Ditto
 NewBarkGroupSprites:
 	db SPRITE_SUICUNE
 	db SPRITE_SILVER_TROPHY

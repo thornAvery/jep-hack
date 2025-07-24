@@ -459,14 +459,7 @@ INCBIN "data/tilesets/nihon_birdon_metatiles.bin"
 TilesetNihonBirdonColl::
 INCLUDE "data/tilesets/nihon_birdon_collision.asm"
 
-TilesetNihonFontGFX::
-INCBIN "gfx/tilesets/nihon_font.2bpp.lz"
 
-TilesetNihonFontMeta::
-INCBIN "data/tilesets/nihon_font_metatiles.bin"
-
-TilesetNihonFontColl::
-INCLUDE "data/tilesets/nihon_font_collision.asm"
 
 TilesetNihonHighTechGFX::
 INCBIN "gfx/tilesets/nihon_hightech.2bpp.lz"
@@ -680,3 +673,12 @@ INCLUDE "data/tilesets/underwater_collision.asm"
 
 TilesetUnderwaterAttr::
 INCBIN "data/tilesets/underwater_attributes.bin"
+
+TilesetNihonFontGFX::
+INCBIN "gfx/tilesets/nihon_font.2bpp.lz"
+
+TilesetNihonFontMeta::
+INCBIN "data/tilesets/nihon_font_metatiles.bin"
+
+TilesetNihonFontColl::
+INCLUDE "data/tilesets/nihon_font_collision.asm"

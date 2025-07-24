@@ -697,6 +697,9 @@ ENDM
 	map_const ROUTE_52_RUDDY_TOWN_GATE,						5, 4 ; 6
 	map_const ROUTE_53_RUDDY_TOWN_GATE,						5, 4 ; 7
 	map_const ROUTE_54_RUDDY_TOWN_GATE,						5, 4 ; 8
+	endgroup
+	
+	newgroup OCHRE_TOWN
 	map_const ROUTE_53,									  35,  9 ; 9
 	endgroup
 
