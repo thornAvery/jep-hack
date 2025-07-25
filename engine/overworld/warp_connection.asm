@@ -4,7 +4,6 @@ HandleNewMap:
 	call ResetFlashIfOutOfCave
 	call GetCurrentMapSceneID
 	call ResetBikeFlags
-	call ResetDiveMap
 	call ResetMapLockedIDs
 	ld a, MAPCALLBACK_NEWMAP
 	call RunMapCallback

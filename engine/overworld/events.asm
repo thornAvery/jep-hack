@@ -1143,22 +1143,13 @@ TryTileCollisionEvent::
 .headbutt
 	ld a, [wFacingTileID]
 	call CheckHeadbuttTreeTile
-	jr nz, .strong_arm
+	jr nz, .surf
 	farcall TryHeadbuttOW
 	jr c, .done
 	jr .noevent
 
-.strong_arm
-	ld a, [wFacingTileID]
-	call CheckRockyWallTile
-	jr nz, .surf
-	farcall TryStrongArmOW
-	jr .done
-
 .surf
 	farcall TrySurfOW
-	jr c, .done
-	farcall TryWaterSportOW
 	jr nc, .noevent
 	jr .done
 

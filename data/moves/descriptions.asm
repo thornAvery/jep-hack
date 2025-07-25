@@ -1324,8 +1324,8 @@ UppercutDescription:
 	next "cause flinching.@"
 
 WaterSportDescription:
-	db "Lowers FIRE move"
-	next "power to attack.@" 
+	db "Lowers FIRE move" ; I really want to change this tbh
+	next "power.@" 
 
 DazzlingGleamDescription:
 	db "Flashes a bright"

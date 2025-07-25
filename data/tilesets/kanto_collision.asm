@@ -187,4 +187,3 @@
 	tilecoll WALL, WALL, WALL, WATER ; ba
 	tilecoll WALL, WALL, WATER, WALL ; bb
 	tilecoll WALL, HOP_DOWN_LEFT, WALL, WALL ; bc
-	tilecoll FLOOR, FLOOR, ROCKY_WALL, WALL ; bd

@@ -1,9 +1,3 @@
-; Heavily edited when adding Water Sport's effect.
-; If errors occur (especially involving Substitute), check https://github.com/Rangi42/pokecrystal/commit/c21561ea717feef9b2eb3785c2ea112cd0d19ba0#diff-88dbff1eb3920f69b17a3d5f613643e1a41096514706bc09f449e4aa637f20e4R5647
-
-; There is a high chance you will run out of memory and I am not sure how this is resolved.
-; I imagine bankswitches will be necessary.
-
 DoPlayerTurn:
 	call SetPlayerTurn
 
@@ -366,9 +360,6 @@ CantMove:
 
 	res SUBSTATUS_UNDERGROUND, [hl]
 	res SUBSTATUS_FLYING, [hl]
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVarAddr
-	res SUBSTATUS_UNDERWATER, [hl]
 	jp AppearUserRaiseSub
 
 OpponentCantMove:
@@ -533,17 +524,12 @@ CheckEnemyTurn:
 	xor a
 	ld [wNumHits], a
 
-	; Flicker the monster pic unless flying, underwater, or underground.
+	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
-	jr nz, .no_flicker
-	ld a, BATTLE_VARS_SUBSTATUS4_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_UNDERWATER
 	call z, PlayFXAnimID
-.no_flicker
 
 	ld c, TRUE
 	call DoEnemyDamage
@@ -641,17 +627,12 @@ HitConfusion:
 	xor a
 	ld [wNumHits], a
 
-	; Flicker the monster pic unless flying, underwater, or underground.
+	; Flicker the monster pic unless flying or underground.
 	ld de, ANIM_HIT_CONFUSION
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
-	jr nz, .no_flicker
-	ld a, BATTLE_VARS_SUBSTATUS4_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_UNDERWATER
 	call z, PlayFXAnimID
-.no_flicker
 
 	ld hl, UpdatePlayerHUD
 	call CallBattleCore
@@ -1771,47 +1752,13 @@ BattleCommand_CheckHit:
 	ret
 
 .FlyDigMoves:
-; Check for moves that can hit underground/flying opponents. And divers.
+; Check for moves that can hit underground/flying opponents.
 ; Return z if the current move can hit the opponent.
 
 	ld a, BATTLE_VARS_SUBSTATUS3_OPP
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
-	jr nz, .flying_or_underground
-	
-	ld a, BATTLE_VARS_SUBSTATUS4_OPP
-	call GetBattleVar
-	and 1 << SUBSTATUS_UNDERWATER
 	ret z
-	
-	ld a, BATTLE_VARS_MOVE_ANIM
-	call GetBattleVar
-	ld hl, SURF
-	call GetMoveIDFromIndex
-	ld a, h
-	if HIGH(SURF)
-		cp HIGH(SURF)
-	else
-		and a
-	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(SURF)
-	ret z
-	ld hl, WHIRLPOOL
-	call GetMoveIDFromIndex
-	ld a, h
-	if HIGH(WHIRLPOOL)
-		cp HIGH(WHIRLPOOL)
-	else
-		and a
-	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(WHIRLPOOL)
-	ret
 
 .flying_or_underground
 	bit SUBSTATUS_FLYING, a
@@ -2089,6 +2036,11 @@ BattleCommand_MoveAnimNoSub:
 	ret nc
 	jp AppearUserLowerSub
 
+.fly_dig_moves
+	dw FLY
+	dw DIG
+	dw -1
+
 .alternate_anim
 	ld a, [wBattleAnimParam]
 	and 1
@@ -2200,11 +2152,13 @@ BattleCommand_FailureText:
 	call GetBattleVarAddr
 	res SUBSTATUS_UNDERGROUND, [hl]
 	res SUBSTATUS_FLYING, [hl]
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVarAddr
-	res SUBSTATUS_UNDERWATER, [hl]
 	call AppearUserRaiseSub
 	jp EndMoveEffect
+
+.fly_dig_moves
+	dw FLY
+	dw DIG
+	dw -1
 
 BattleCommand_ApplyDamage:
 	ld a, BATTLE_VARS_SUBSTATUS1_OPP
@@ -3473,11 +3427,6 @@ FarPlayBattleAnimation:
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
 	ret nz
-	
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVar
-	and 1 << SUBSTATUS_UNDERWATER
-	ret nz
 
 	; fallthrough
 
@@ -3664,12 +3613,7 @@ DoSubstituteDamage:
 	ld a, BATTLE_VARS_SUBSTATUS3
 	call GetBattleVar
 	and 1 << SUBSTATUS_FLYING | 1 << SUBSTATUS_UNDERGROUND
-	jr nz, .dont_lower_sub
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVar
-	and 1 << SUBSTATUS_UNDERWATER
 	call z, AppearUserLowerSub
-.dont_lower_sub
 	call BattleCommand_SwitchTurn
 
 	ld a, BATTLE_VARS_MOVE_EFFECT
@@ -5608,9 +5552,6 @@ BattleCommand_CheckCharge:
 	res SUBSTATUS_CHARGED, [hl]
 	res SUBSTATUS_UNDERGROUND, [hl]
 	res SUBSTATUS_FLYING, [hl]
-	ld a, BATTLE_VARS_SUBSTATUS4
-	call GetBattleVarAddr
-	res SUBSTATUS_UNDERWATER, [hl]
 	ld b, charge_command
 	jp SkipToBattleCommand
 
@@ -5644,58 +5585,20 @@ BattleCommand_Charge:
 	call LoadMoveAnim
 	ld a, BATTLE_VARS_MOVE_ANIM
 	call GetBattleVar
-	ld hl, WATER_SPORT
-	call GetMoveIDFromIndex
-	ld a, h
-	if HIGH(WATER_SPORT)
-		cp HIGH(WATER_SPORT)
+	ld h, a
+	ld bc, FLY
+	call CompareMove
+	ld a, 1 << SUBSTATUS_FLYING
+	jr z, .got_move_type
+	if HIGH(FLY) != HIGH(DIG)
+		ld bc, DIG
 	else
-		and a
+		ld c, LOW(DIG)
 	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(WATER_SPORT)
-	jp z, .set_diving
-	ld hl, FLY
-	call GetMoveIDFromIndex
 	ld a, h
-	if HIGH(FLY)
-		cp HIGH(FLY)
-	else
-		and a
-	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(FLY)
-	jr z, .set_flying
-	ld hl, BOUNCE
-	call GetMoveIDFromIndex
-	ld a, h
-	if HIGH(BOUNCE)
-		cp HIGH(BOUNCE)
-	else
-		and a
-	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(BOUNCE)
-	jr z, .set_flying
-	ld hl, DIG
-	call GetMoveIDFromIndex
-	ld a, h
-	if HIGH(DIG)
-		cp HIGH(DIG)
-	else
-		and a
-	endc
-	ld a, l
-	pop hl
-	ret nz
-	cp LOW(DIG)
-	jr z, .set_flying
+	call CompareMove
+	ld a, 1 << SUBSTATUS_UNDERGROUND
+	jr z, .got_move_type
 	call BattleCommand_RaiseSub
 	jr .not_flying
 
@@ -5824,8 +5727,6 @@ BattleCommand_Charge:
 	dw SKY_ATTACK, .BattleGlowingText
 	dw FLY,        .BattleFlewText
 	dw DIG,        .BattleDugText
-	dw BOUNCE,	   .BattleFlewText
-	dw WATER_SPORT, .BattleWaterSportText
 	dw -1
 
 .BattleMadeWhirlwindText:
@@ -5852,10 +5753,9 @@ BattleCommand_Charge:
 	text_far _BattleDugText
 	text_end
 
-.BattleWaterSportText:
-; 'hid underwater!'
-	text_jump HidUnderwaterText
-	db "@"
+BattleCommand_Unused3C:
+; effect0x3c
+	ret
 
 BattleCommand_TrapTarget:
 	ld a, [wAttackMissed]
@@ -6618,6 +6518,10 @@ INCLUDE "engine/battle/move_effects/perish_song.asm"
 INCLUDE "engine/battle/move_effects/sandstorm.asm"
 
 INCLUDE "engine/battle/move_effects/rollout.asm"
+
+BattleCommand_Unused5D:
+; effect0x5d
+	ret
 
 INCLUDE "engine/battle/move_effects/fury_cutter.asm"
 

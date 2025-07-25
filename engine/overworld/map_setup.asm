@@ -98,8 +98,6 @@ CheckUpdatePlayerSprite:
 	jr c, .ok
 	call .CheckSurfing
 	jr c, .ok
-	call .CheckDiving
-	jr c, .ok
 	call .CheckSurfing2
 	jr c, .ok
 	ret
@@ -116,18 +114,6 @@ CheckUpdatePlayerSprite:
 	ld a, PLAYER_BIKE
 	ld [wPlayerState], a
 	scf
-	ret
-
-.CheckDiving:
-	ld a, [wMapTileset]
-	cp TILESET_UNDERWATER
-	jr nz, .not_underwater
-	ld a, PLAYER_WATER_SPORT
-	ld [wPlayerState], a
-	scf
-	ret
-.not_underwater
-	and a
 	ret
 
 .CheckSurfing2:

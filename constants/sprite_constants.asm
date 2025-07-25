@@ -145,7 +145,6 @@
 	const SPRITE_BALDING_GUY
 	const SPRITE_GAMEBOY_GIRL
 	const SPRITE_OVERWORLD_PIKACHU
-	const SPRITE_DIVE
 DEF NUM_OVERWORLD_SPRITES EQU const_value - 1
 
 ; SpriteMons indexes (see data/sprites/sprite_mons.asm)

@@ -159,6 +159,8 @@ CheckPitTile::
 CheckIceTile::
 	cp COLL_ICE
 	ret z
+	cp COLL_ICE_2B
+	ret z
 	scf
 	ret
 
@@ -169,12 +171,6 @@ CheckWhirlpoolTile::
 	cp COLL_WHIRLPOOL_2C
 	ret z
 	scf
-	ret
-
-CheckDiveTile::
-	cp COLL_DIVE_UP
-	ret z
-	cp COLL_DIVE_DOWN
 	ret
 
 CheckWaterfallTile::
@@ -566,8 +562,4 @@ GetSpriteDirection::
 	add hl, bc
 	ld a, [hl]
 	maskbits NUM_DIRECTIONS, 2
-	ret
-
-CheckRockyWallTile::
-	cp COLL_ROCKY_WALL
 	ret
