@@ -516,9 +516,11 @@ LedybaEvosAttacks:
 	dbbw EVOLVE_LEVEL, 18, LEDIAN
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 4, COMET_PUNCH
 	dbw 6, SUPERSONIC
 	dbw 12, QUICK_ATTACK ; SW97
-	dbw 17, COMET_PUNCH
+	dbw 15, MACH_PUNCH ; XY and SV
 	dbw 22, LIGHT_SCREEN
 	dbw 22, REFLECT
 	dbw 27, BATON_PASS
@@ -533,9 +535,11 @@ LedybaEvosAttacks:
 LedianEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, STRING_SHOT
+	dbw 4, COMET_PUNCH
 	dbw 6, SUPERSONIC
 	dbw 12, QUICK_ATTACK ; SW97
-	dbw 17, COMET_PUNCH
+	dbw 15, MACH_PUNCH ; XY and SV
 	dbw 24, LIGHT_SCREEN
 	dbw 24, REFLECT
 	dbw 29, BATON_PASS

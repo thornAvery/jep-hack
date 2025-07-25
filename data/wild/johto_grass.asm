@@ -1299,15 +1299,15 @@ JohtoGrassWildMons:
 	dbw 3, LEDYBA
 	dbw 3, CATERPIE
 	dbw 4, CATERPIE
-	dbw 4, GENTLARVA
+	dbw 4, LEDYBA
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
 	dbw 5, HOPPIP
 	; day
-	dbw 3, PIDGEY
+	dbw 3, LEDYBA
 	dbw 3, CATERPIE
 	dbw 4, CATERPIE
-	dbw 4, GENTLARVA
+	dbw 4, LEDYBA
 	dbw 3, WEEDLE
 	dbw 4, HOPPIP
 	dbw 5, HOPPIP
@@ -1331,15 +1331,15 @@ JohtoGrassWildMons:
 	dbw 5, LEDYBA
 	dbw 4, CATERPIE
 	dbw 6, LEDYBA
-	dbw 4, GENTLARVA
+	dbw 4, LEDYBA
 	dbw 4, WEEDLE
 	dbw 5, BELLSPROUT
 	dbw 5, HOPPIP
 	; day
-	dbw 5, PIDGEY
+	dbw 5, LEDYBA
 	dbw 4, CATERPIE
 	dbw 5, BELLSPROUT
-	dbw 4, GENTLARVA
+	dbw 4, LEDYBA
 	dbw 4, WEEDLE
 	dbw 6, BELLSPROUT
 	dbw 5, HOPPIP
