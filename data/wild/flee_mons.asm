@@ -16,6 +16,13 @@ SometimesFleeMons:
 	dw SNUBBULL
 	dw HERACROSS
 	dw BALUMBA
+	dw PHANPY
+	dw TEDDIURSA
+	dw DIGLETT
+	dw WIGLETT
+	dw SQUEAMATA
+	dw DUNSPARCE
+	dw DUDUNSPARCE
 	dw -1
 
 OftenFleeMons:
@@ -25,8 +32,6 @@ OftenFleeMons:
 	dw MOLTRES ; review
 	dw QUAGSIRE
 	dw DELIBIRD
-	dw PHANPY
-	dw TEDDIURSA
 	dw KIWOOKED
 	dw TOEDSCOOL
 	dw -1
