@@ -78,7 +78,7 @@ TilesetForestAnim:
 
 TilesetJohtoAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
-	dw vTiles2 tile $5b, AnimateDeepWaterTile
+	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation
@@ -237,6 +237,7 @@ TilesetTowerAnim:
 	dw NULL,  DoneTileAnimation
 
 TilesetNihon1Anim:
+TilesetNihonBirdonAnim:
 TilesetNihonFontAnim:
 TilesetNihonHighTechAnim:
 TilesetNihonOldAnim:
@@ -246,19 +247,6 @@ TilesetNihonWhiteCityAnim:
 	dw vTiles2 tile $14, AnimateWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateWaterPalette
-	dw NULL,  WaitTileAnimation
-	dw NULL,  AnimateFlowerTile
-	dw NULL,  WaitTileAnimation
-	dw NULL,  WaitTileAnimation
-	dw NULL,  StandingTileFrame8
-	dw NULL,  DoneTileAnimation
-
-TilesetNihonBirdonAnim:
-	dw vTiles2 tile $14, AnimateWaterTile
-	dw NULL,  WaitTileAnimation
-	dw vTiles2 tile $60, AnimateDeepWaterTile
 	dw NULL,  WaitTileAnimation
 	dw NULL,  AnimateWaterPalette
 	dw NULL,  WaitTileAnimation

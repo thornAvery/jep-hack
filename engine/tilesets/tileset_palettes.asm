@@ -73,11 +73,6 @@ LoadSpecialMapPalette:
 	scf
 	ret
 	
-.underwater
-	call LoadUnderwaterPalette
-	scf
-	ret
-
 .do_nothing
 	and a
 	ret
