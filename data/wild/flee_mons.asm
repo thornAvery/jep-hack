@@ -19,7 +19,7 @@ SometimesFleeMons:
 	dw PHANPY
 	dw TEDDIURSA
 	dw DIGLETT
-	dw WIGLETT
+;	dw WIGLETT
 	dw SQUEAMATA
 	dw DUNSPARCE
 	dw DUDUNSPARCE

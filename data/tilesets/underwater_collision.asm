@@ -2,11 +2,13 @@
 	tilecoll FLOOR, FLOOR, FLOOR, FLOOR ; 01
 	tilecoll WALL, WALL, WALL, WALL ; 02
 	tilecoll WALL, WALL, WALL, WALL ; 03
-	tilecoll DIVE_UP, DIVE_UP, DIVE_UP, DIVE_UP ; 04
+;	tilecoll DIVE_UP, DIVE_UP, DIVE_UP, DIVE_UP ; 04
+	tilecoll WALL, WALL, WALL, WALL ; Placeholder for above
 	tilecoll WALL, WALL, WALL, WALL ; 05
 	tilecoll WALL, WALL, WALL, WALL ; 06
 	tilecoll WALL, WALL, WALL, WALL ; 07
-	tilecoll FLOOR, FLOOR, FLOOR, DIVE_UP ; 08
+;	tilecoll FLOOR, FLOOR, FLOOR, DIVE_UP ; 08
+	tilecoll WALL, WALL, WALL, WALL ; Placeholder for above
 	tilecoll WALL, WALL, WALL, WALL ; 09
 	tilecoll WALL, WALL, WALL, WALL ; 0a
 	tilecoll WALL, WALL, WALL, WALL ; 0b

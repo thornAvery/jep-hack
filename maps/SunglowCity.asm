@@ -5,15 +5,15 @@ SunglowCity_MapScripts:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, .Flypoint
-	callback MAPCALLBACK_NEWMAP, .DiveMap
+;	callback MAPCALLBACK_NEWMAP, .DiveMap
 
 .Flypoint:
 	setflag ENGINE_FLYPOINT_SUNGLOW_CITY
 	endcallback
 
-.DiveMap:
-    divemap SUNGLOW_WELL, 0, 0
-    endcallback
+;.DiveMap:
+;    divemap SUNGLOW_WELL, 0, 0
+;    endcallback
 
 SunglowCity_MapEvents:
 	db 0, 0 ; filler

@@ -43,8 +43,8 @@ TileCollisionTable::
 	db WALL_TILE         ; COLL_BUOY
 	db WATER_TILE        ; COLL_CUT_28
 	db WATER_TILE        ; COLL_WATER
-	db WATERTILE | TALK ; COLL_DIVE_DOWN (unused)
-	db LANDTILE | TALK ; COLL_DIVE_UP (unused)
+	db WATER_TILE | TALK ; COLL_DIVE_DOWN (unused)
+	db LAND_TILE | TALK ; COLL_DIVE_UP (unused)
 	db WATER_TILE | TALK ; COLL_WHIRLPOOL_2C
 	db WATER_TILE        ; 2d
 	db WATER_TILE        ; 2e
