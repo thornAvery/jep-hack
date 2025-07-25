@@ -511,9 +511,6 @@ INCLUDE "data/tilesets/nihon_west_collision.asm"
 TilesetNihonBirdonAttr::
 INCBIN "data/tilesets/nihon_birdon_attributes.bin"
 
-TilesetNihonFontAttr::
-INCBIN "data/tilesets/nihon_font_attributes.bin"
-
 TilesetNihonHighTechAttr::
 INCBIN "data/tilesets/nihon_hightech_attributes.bin"
 
@@ -659,3 +656,15 @@ INCBIN "data/tilesets/players_room_metatiles.bin"
 
 TilesetPlayersRoomColl::
 INCLUDE "data/tilesets/players_room_collision.asm"
+
+TilesetNihonFontMeta::
+INCBIN "data/tilesets/nihon_font_metatiles.bin"
+
+TilesetNihonFontColl::
+INCLUDE "data/tilesets/nihon_font_collision.asm"
+
+TilesetNihonFontAttr::
+INCBIN "data/tilesets/nihon_font_attributes.bin"
+
+TilesetNihonFontGFX::
+INCBIN "gfx/tilesets/nihon_font.2bpp.lz"
