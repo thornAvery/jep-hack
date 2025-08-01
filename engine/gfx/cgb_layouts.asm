@@ -177,6 +177,9 @@ InitPartyMenuBGPal0:
 	ret
 
 _CGB_PokegearPals:
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBmode
 	ld a, [wPlayerGender]
 	and a ; MALE
 	jr z, .male
@@ -196,6 +199,41 @@ _CGB_PokegearPals:
 	call ApplyPals
 	ld a, TRUE
 	ldh [hCGBPalUpdate], a
+	ret
+	
+.SGBmode
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male2
+	dec a ; FEMALE
+	jr z, .female
+	ld a, PREDEFPAL_POKEGEAR_TOPAZ ; topaz palette
+	jr .got_sgb_pal
+	
+.male2
+	ld a, PREDEFPAL_POKEGEAR ; default pokegear interface palette
+	jr .got_sgb_pal
+	
+.female
+	ld a, PREDEFPAL_POKEGEAR_KRIS ; kris palette
+	
+.got_sgb_pal
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 6 OB palettes, should be pointing at code from loading the overworld object palettes
+	ld b, 6
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
 	ret
 
 _CGB_StatsScreenHPPals:
@@ -565,7 +603,7 @@ _CGB_MapPals:
 ; Copy PAL_BG_TEXT and 6 OB palettes
 	ld b, 7
 .ob_loop
-	call .LoadHLOBPaletteIntoDE
+	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
 ; Copy PAL_OW_TREE and PAL_OW_ROCK
@@ -589,12 +627,12 @@ _CGB_MapPals:
 	jr nc, .bg_darkness
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 .bg_done
 	pop hl
 	ret
@@ -602,50 +640,50 @@ _CGB_MapPals:
 .bg_darkness
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	jr .bg_done
 .bg_morn_day
 ;		Lot of commented out code for spaceworld-style mornings.
 ;	ld a, [wTimeOfDayPal]
 ;	cp MORN_F
 ;	jr nz, .bg_day
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	inc hl
 ;	inc hl
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	dec hl
 ;	dec hl
-;	call .LoadHLColorIntoDE
-;	call .LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
+;	call LoadHLColorIntoDE
 ;	jr .bg_done
 ;.bg_day
 	call LoadHLPaletteIntoDE
 	jr .bg_done
 
-.LoadHLOBPaletteIntoDE:
+LoadHLOBPaletteIntoDE:
 ; shades 0, 1, 2, 3 -> 0, 0, 1, 3
 	push hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	dec hl
 	dec hl
-	call .LoadHLColorIntoDE
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	inc hl
 	inc hl
-	call .LoadHLColorIntoDE
+	call LoadHLColorIntoDE
 	pop hl
 	ret
 
-.LoadHLColorIntoDE:
+LoadHLColorIntoDE:
 	ldh a, [rSVBK]
 	push af
 	ld a, BANK(wBGPals1)
