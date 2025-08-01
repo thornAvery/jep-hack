@@ -790,6 +790,7 @@ _CGB_UnownPuzzle:
 _CGB_TrainerCard:
 	ld a, [wOptions2]
 	and 1 << MENU_ACCOUNT
+	jp z, .TrainercardSGB
 	ld de, wBGPals1
 	xor a ; CHRIS
 	call GetTrainerPalettePointer
@@ -911,9 +912,32 @@ _CGB_TrainerCard:
 .BadgePalettes:
 INCLUDE "gfx/trainer_card/badges.pal"
 
+.TrainercardSGB:
+	ld a, PREDEFPAL_DIPLOMA ; Gen 1 Human Palette (Do we want to do something per gender with this?)
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .ob_loop
+	ret
+
 _CGB_TrainerCardKanto:
 	ld a, [wOptions2]
 	and 1 << MENU_ACCOUNT
+	jp z, .TrainercardSGB2
 	ld de, wBGPals1
 	xor a ; CHRIS & MISTY
 	call GetTrainerPalettePointer
@@ -1034,6 +1058,28 @@ _CGB_TrainerCardKanto:
 	
 .KantoBadgePalettes:
 INCLUDE "gfx/trainer_card/kanto_badges.pal"
+
+.TrainercardSGB2:
+	ld a, PREDEFPAL_DIPLOMA ; Gen 1 Human Palette (Do we want to do something per gender with this?)
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .ob_loop
+	ret
 
 _CGB_MoveList:
 	ld de, wBGPals1
