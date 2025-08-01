@@ -913,7 +913,21 @@ _CGB_TrainerCard:
 INCLUDE "gfx/trainer_card/badges.pal"
 
 .TrainercardSGB:
-	ld a, PREDEFPAL_DIPLOMA ; Gen 1 Human Palette (Do we want to do something per gender with this?)
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male4
+	dec a ; FEMALE
+	jr z, .female4
+	ld a, PREDEFPAL_CGB_BADGE ; RB Grey Palette
+	jr .got_card_sgb_pal
+	
+.male4
+	ld a, PREDEFPAL_DIPLOMA ; RB Human Palette
+	jr .got_card_sgb_pal
+.female4
+	ld a, PREDEFPAL_YELLOW_HUMAN ; Yellow Human Palette
+	
+.got_card_sgb_pal
 	call GetPredefPal
 	ld de, wBGPals1 
 ; Copy 8 BG palettes
@@ -1060,7 +1074,21 @@ _CGB_TrainerCardKanto:
 INCLUDE "gfx/trainer_card/kanto_badges.pal"
 
 .TrainercardSGB2:
-	ld a, PREDEFPAL_DIPLOMA ; Gen 1 Human Palette (Do we want to do something per gender with this?)
+	ld a, [wPlayerGender]
+	and a ; MALE
+	jr z, .male4
+	dec a ; FEMALE
+	jr z, .female4
+	ld a, PREDEFPAL_CGB_BADGE ; RB Grey Palette
+	jr .got_card_sgb_pal2
+	
+.male4
+	ld a, PREDEFPAL_DIPLOMA ; RB Human Palette
+	jr .got_card_sgb_pal2
+.female4
+	ld a, PREDEFPAL_YELLOW_HUMAN ; Yellow Human Palette
+	
+.got_card_sgb_pal2
 	call GetPredefPal
 	ld de, wBGPals1 
 ; Copy 8 BG palettes
