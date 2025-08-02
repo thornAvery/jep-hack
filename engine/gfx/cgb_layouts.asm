@@ -702,7 +702,23 @@ _CGB_PartyMenu:
 	call CopyFourPalettes
 	call InitPartyMenuBGPal0
 	call InitPartyMenuBGPal7
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBmode
 	call InitPartyMenuOBPals
+	call ApplyAttrmap
+	ret
+	
+.SGBmode
+	ld a, PREDEFPAL_PARTY_ICON ; SGB Party object Palette
+	call GetPredefPal
+	ld de, wOBPals1 
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
 	call ApplyAttrmap
 	ret
 
@@ -941,9 +957,7 @@ INCLUDE "gfx/trainer_card/badges.pal"
 ; Copy 8 OB palettes
 	ld b, 8
 .ob_loop
-	push hl
-	call LoadHLPaletteIntoDE
-	pop hl
+	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
 	ret
@@ -1102,9 +1116,7 @@ INCLUDE "gfx/trainer_card/kanto_badges.pal"
 ; Copy 8 OB palettes
 	ld b, 8
 .ob_loop
-	push hl
-	call LoadHLPaletteIntoDE
-	pop hl
+	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
 	ret
@@ -1157,6 +1169,10 @@ _CGB_PokedexSearchOption:
 
 _CGB_PackPals:
 ; pack pals
+	ld a, [wOptions2]	; Are we in SGB mode?
+	and 1 << MENU_ACCOUNT
+	jp z, .SGBpack		; Get SGB style palettes
+	
 	ld a, [wBattleType]
 	cp BATTLETYPE_TUTORIAL
 	jr z, .tutorial_male
@@ -1217,6 +1233,26 @@ INCLUDE "gfx/pack/pack_f.pal"
 
 .EnbyPackPals:
 INCLUDE "gfx/pack/pack_nb.pal"
+
+.SGBpack
+	ld a, PREDEFPAL_PACK ; SGB Pack Palette
+	call GetPredefPal
+	ld de, wBGPals1 
+; Copy 8 BG palettes
+	ld b, 8
+.bg_loop
+	push hl
+	call LoadHLPaletteIntoDE
+	pop hl
+	dec b
+	jr nz, .bg_loop
+; Copy 8 OB palettes
+	ld b, 8
+.ob_loop
+	call LoadHLOBPaletteIntoDE
+	dec b
+	jr nz, .ob_loop
+	ret
 
 _CGB_Pokepic:
 	call _CGB_MapPals
