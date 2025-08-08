@@ -127,7 +127,8 @@
 	const MUSIC_FORTUNASF					 ; 7a
 	const MUSIC_JASPERFOREST				 ; 7b
 	const MUSIC_SEVII						 ; 7c
-	const MUSIC_FOURISLAND					 ; 7d (We're coming up on $80, there's a fix in the pokecrystal design flaws section but that and above may be buggy)
+	const MUSIC_FOURISLAND					 ; 7d
+	const MUSIC_SIXISLAND					 ; 7e
 DEF NUM_MUSIC_SONGS EQU const_value
 
 ; GetMapMusic picks music for these values (see home/map.asm)

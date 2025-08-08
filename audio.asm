@@ -178,6 +178,7 @@ INCLUDE "audio/music/FortunaSF.asm"
 INCLUDE "audio/music/JasperForest.asm"
 INCLUDE "audio/music/sevii.asm"
 INCLUDE "audio/music/FourIsland.asm"
+INCLUDE "audio/music/SixIsland.asm"
 
 SECTION "Sound Effects", ROMX
 

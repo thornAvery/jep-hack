@@ -130,4 +130,5 @@ Music:
 	dba Music_JasperForest
 	dba Music_Sevii
 	dba Music_FourIsland
+	dba Music_SixIsland
 	assert_table_length NUM_MUSIC_SONGS
