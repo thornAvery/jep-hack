@@ -174,7 +174,7 @@ JEP-affiliated musicians require music to be used with direct credit for non-com
 
 ### Unaffiliated
 - FroggestSpirit: HGSS Poke Mart Demix
-- TempoQuill: Gen 1 Style Remixes of Lake of Rage Azalea Town, and Violet City (used in the Sevii Islands)
+- TempoQuill: Gen 1 Style Remixes of Lake of Rage, Azalea Town, and Violet City (used in the Sevii Islands)
 
 ## Other Sources
 - Nob Ogasawara (Many prototype Pokemon names)
