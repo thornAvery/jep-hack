@@ -1011,6 +1011,9 @@ INCLUDE "gfx/trainer_card/badges.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_TrainerCardKanto:
@@ -1170,6 +1173,9 @@ INCLUDE "gfx/trainer_card/kanto_badges.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_MoveList:
@@ -1303,6 +1309,9 @@ INCLUDE "gfx/pack/pack_nb.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_Pokepic:
