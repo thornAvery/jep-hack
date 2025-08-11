@@ -225,7 +225,7 @@ NewPokedexOrder:
 	dw QATU
 	dw XATU
 	dw AERCROW
-	dw FOXFIRE
+	dw ZORRIEGO
 	dw QWILFISH
 	dw KAZAPPELIN
 	dw QWILFATHER

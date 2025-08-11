@@ -274,7 +274,7 @@ MonMenuIcons:
 	db ICON_ODDISH      ; SUNFLORA
 	db ICON_SLOWPOKE    ; HIPPUNK
 	db ICON_BIRD        ; AERCROW
-	db ICON_FOX         ; FOXFIRE
+	db ICON_FOX         ; ZORRIEGO
 	db ICON_BUG         ; YANMA
 	db ICON_BUG         ; YANMEGA
 	db ICON_BUG         ; ONIYANMA

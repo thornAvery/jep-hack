@@ -557,8 +557,8 @@ PokemonPicPointers::
 	dba HippunkBackpic
 	dba AercrowFrontpic
 	dba AercrowBackpic
-	dba FoxfireFrontpic
-	dba FoxfireBackpic
+	dba ZorriegoFrontpic
+	dba ZorriegoBackpic
 	dba YanmaFrontpic
 	dba YanmaBackpic
 	dba YanmegaFrontpic

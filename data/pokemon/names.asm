@@ -276,7 +276,7 @@ PokemonNames::
 	db "SUNFLORA@@"
 	db "TORPIR@@@@"
 	db "AERCROW@@@"
-	db "FOXFIRE@@@"
+	db "ZORRIEGO@@"
 	db "YANMA@@@@@"
 	db "YANMEGA@@@"
 	db "ONIYANMA@@"
