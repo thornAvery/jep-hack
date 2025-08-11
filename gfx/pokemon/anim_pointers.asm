@@ -272,7 +272,7 @@ AnimationPointers:
 	dw SunfloraAnimation
 	dw HippunkAnimation
 	dw AercrowAnimation
-	dw FoxfireAnimation
+	dw ZorriegoAnimation
 	dw YanmaAnimation
 	dw YanmegaAnimation
 	dw OniyanmaAnimation

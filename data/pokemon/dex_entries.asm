@@ -268,7 +268,7 @@ SunbudPokedexEntry::     INCLUDE "data/pokemon/dex_entries/sunbud.asm"
 SunfloraPokedexEntry::   INCLUDE "data/pokemon/dex_entries/sunflora.asm"
 HippunkPokedexEntry::    INCLUDE "data/pokemon/dex_entries/hippunk.asm"
 AercrowPokedexEntry::    INCLUDE "data/pokemon/dex_entries/aercrow.asm"
-FoxfirePokedexEntry::    INCLUDE "data/pokemon/dex_entries/foxfire.asm"
+ZorriegoPokedexEntry::   INCLUDE "data/pokemon/dex_entries/zorriego.asm"
 
 
 SECTION "Pokedex Entries 193-251", ROMX
