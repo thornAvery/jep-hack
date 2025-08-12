@@ -273,7 +273,7 @@ PokedexDataPointerTable:
 	dba SunfloraPokedexEntry
 	dba HippunkPokedexEntry
 	dba AercrowPokedexEntry
-	dba FoxfirePokedexEntry
+	dba ZorriegoPokedexEntry
 	dba YanmaPokedexEntry
 	dba YanmegaPokedexEntry
 	dba OniyanmaPokedexEntry

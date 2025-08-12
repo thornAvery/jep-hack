@@ -228,9 +228,9 @@ JohtoWaterWildMons:
 
 	def_water_wildmons CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	dbw 30, TENTACOOL
-	dbw 35, CHINCHOU
-	dbw 30, TENTACRUEL
+	dbw 25, TENTACOOL
+	dbw 20, CHINCHOU
+	dbw 25, TENTACRUEL
 	end_water_wildmons
 
 	def_water_wildmons OLIVINE_CITY

@@ -199,6 +199,8 @@ KabufossilGroup:
 LassGroup:
 	next_list_item ; LASS (1)
 	db "CARRIE@", TRAINERTYPE_NORMAL
+	db 16
+	dw CLEFFA
 	db 18
 	dw SNUBBULL
 	db -1 ; end
@@ -206,11 +208,11 @@ LassGroup:
 	next_list_item ; LASS (2)
 	db "BRIDGET@", TRAINERTYPE_NORMAL
 	db 15
-	dw JIGGLYPUFF
+	dw AZURILL
 	db 15
-	dw JIGGLYPUFF
-	db 15
-	dw JIGGLYPUFF
+	dw HAPPINY
+	db 17
+	dw WIGGLYTUFF
 	db -1 ; end
 
 	next_list_item ; LASS (3)
@@ -225,10 +227,10 @@ LassGroup:
 
 	next_list_item ; LASS (4)
 	db "KRISE@", TRAINERTYPE_NORMAL
-	db 12
-	dw ODDISH
 	db 15
-	dw CUBONE
+	dw SUNBUD
+	db 15
+	dw PHANPY
 	db -1 ; end
 
 	next_list_item ; LASS (5)
@@ -279,12 +281,16 @@ LassGroup:
 
 	next_list_item ; LASS (10)
 	db "DANA@", TRAINERTYPE_MOVES
-	db 18
+	db 25
 	dw FLAAFFY
 	dw TACKLE, GROWL, THUNDERSHOCK, THUNDER_WAVE
-	db 18
-	dw PSYDUCK
+	db 24
+	dw WEIRDUCK
 	dw SCRATCH, TAIL_WHIP, DISABLE, CONFUSION
+	db 25
+	dw RAITORA
+	dw QUICK_ATTACK, LEER, THUNDERSHOCK, ROAR
+	
 	db -1 ; end
 
 	next_list_item ; LASS (11)
@@ -297,8 +303,12 @@ LassGroup:
 
 	next_list_item ; LASS (12)
 	db "CONNIE@", TRAINERTYPE_NORMAL
-	db 21
-	dw MARILL
+	db 25
+	dw MAGNETITE
+	db 25
+	dw ANGORE
+	db 26
+	dw FORRETRESS
 	db -1 ; end
 
 	next_list_item ; LASS (13) - originally Connie 3
@@ -789,8 +799,8 @@ TwinsGroup:
 	next_list_item ; TWINS (2)
 	db "ANN & ANNE@", TRAINERTYPE_MOVES
 	db 16
-	dw CLEFAIRY
-	dw GROWL, ENCORE, DOUBLESLAP, METRONOME
+	dw TOGEPI
+	dw CHARM, POISON_STING, METRONOME, SWEET_KISS
 	db 16
 	dw JIGGLYPUFF
 	dw SING, DEFENSE_CURL, POUND, DISABLE

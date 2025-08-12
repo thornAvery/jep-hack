@@ -273,7 +273,7 @@ FirstEvoStages::
 	dw SUNKERN    ;c0
 	dw HIPPUNK
 	dw AERCROW
-	dw FOXFIRE
+	dw ZORRIEGO
 	dw YANMA
 	dw YANMA
 	dw YANMA

@@ -278,7 +278,7 @@ PokemonCries::
 	mon_cry CRY_SUNFLORA,    -32,  384 ; SUNFLORA
 	mon_cry CRY_NIDORAN_M,     0,    0 ; HIPPUNK	(incomplete)
 	mon_cry CRY_NIDORAN_M,     0,    0 ; AERCROW	(incomplete)
-	mon_cry CRY_NIDORAN_M,     0,    0 ; FOXFIRE	(incomplete)
+	mon_cry CRY_NIDORAN_M,     0,    0 ; ZORRIEGO	(incomplete)
 	mon_cry CRY_TOTODILE,     49,  200 ; YANMA
 	mon_cry CRY_NIDORAN_M,     0,    0 ; YANMEGA	(incomplete)
 	mon_cry CRY_NIDORAN_M,     0,    0 ; ONIYANMA	(incomplete)

@@ -292,7 +292,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const SUNFLORA   ; c0
 	const HIPPUNK
 	const AERCROW
-	const FOXFIRE
+	const ZORRIEGO
 	const YANMA      ; c1
 	const YANMEGA
 	const ONIYANMA

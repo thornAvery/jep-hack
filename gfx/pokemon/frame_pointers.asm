@@ -272,7 +272,7 @@ FramesPointers:
 	dba SunfloraFrames
 	dba HippunkFrames
 	dba AercrowFrames
-	dba FoxfireFrames
+	dba ZorriegoFrames
 	dba YanmaFrames
 	dba YanmegaFrames
 	dba OniyanmaFrames
