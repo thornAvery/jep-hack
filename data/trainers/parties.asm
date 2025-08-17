@@ -5065,7 +5065,7 @@ SageGroup:
 	db -1 ; end
 
 	next_list_item ; SAGE (8)
-	db "NEAL@", TRAINERTYPE_NORMAL
+	db "NEAL@", TRAINERTYPE_MOVES
 	db 5
 	dw KOTORA
 	dw THUNDERSHOCK, TACKLE, FLASH, NO_MOVE
