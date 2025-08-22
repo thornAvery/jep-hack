@@ -2664,7 +2664,7 @@ BugCatcherGroup:
 	db -1 ; end
 
 	next_list_item ; BUG_CATCHER (19)
-	db "WAYNE@", TRAINERTYPE_NORMAL
+	db "WAYNE@", TRAINERTYPE_MOVES
 	db 9
 	dw LEDYBA
 	dw TACKLE, SUPERSONIC, HEADBUTT, NO_MOVE
