@@ -16,7 +16,7 @@ What falls under "Johto- and Kanto-related" is a Pokemon is the following, so lo
 - Is a Paradox equivalent (eg. Walking Wake)
 - Would qualify for the Kanto Expansion Pak (eg. Omegadge, Melmetal)
 
-Any Pokemon that you can think of that would come under this, is absolutely in. Dex total is 483!
+Any Pokemon that you can think of that would come under this, is absolutely in. Dex total is 484!
 
 Many prototype Pokemon have very little information around them: You'll be hard-pressed to find stats, cries, movesets, anything for some. With the Kanto Expansion Pak, we used all context clues available to try and formulate a picture-perfect, accurate representation to the best of our abilities. We've done this with the May 1998 Sprite Cache Pokemon, among others. Whenever something confirmed exists, it is used, and that then informs the interpretation. We also take Nob Ogasawara names as canon whenever they appear.
 
