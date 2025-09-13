@@ -61,7 +61,7 @@ EggMovePointers2::
 	dw NoEggMoves2
 	dw HippunkEggMoves
 	dw AercrowEggMoves
-	dw FoxfireEggMoves
+	dw ZorriegoEggMoves
 	dw YanmaEggMoves
 	dw NoEggMoves2 ; Yanmega
 	dw NoEggMoves2 ; Oniyanma
@@ -388,7 +388,7 @@ AercrowEggMoves:
 	dw WHIRLWIND
 	dw -1 ; end
 
-FoxfireEggMoves:
+ZorriegoEggMoves:
 	dw CONFUSE_RAY
 	dw DISABLE
 	dw FAINT_ATTACK

@@ -128,4 +128,7 @@ Music:
 	dba Music_AlphalithBattle
 	dba Music_FortunaSF
 	dba Music_JasperForest
+	dba Music_Sevii
+	dba Music_FourIsland
+	dba Music_SixIsland
 	assert_table_length NUM_MUSIC_SONGS

@@ -272,7 +272,7 @@ BitmasksPointers:
 	dw SunfloraBitmasks
 	dw HippunkBitmasks
 	dw AercrowBitmasks
-	dw FoxfireBitmasks
+	dw ZorriegoBitmasks
 	dw YanmaBitmasks
 	dw YanmegaBitmasks
 	dw OniyanmaBitmasks

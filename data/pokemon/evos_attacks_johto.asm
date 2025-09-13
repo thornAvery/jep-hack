@@ -61,7 +61,7 @@ EvosAttacksPointers2::
 	dw SunfloraEvosAttacks
 	dw HippunkEvosAttacks
 	dw AercrowEvosAttacks
-	dw FoxfireEvosAttacks
+	dw ZorriegoEvosAttacks
 	dw YanmaEvosAttacks
 	dw YanmegaEvosAttacks
 	dw OniyanmaEvosAttacks
@@ -1165,7 +1165,7 @@ AercrowEvosAttacks:
 	dbw 50, RAZOR_WIND
 	db 0 ; no more level-up moves
 	
-FoxfireEvosAttacks:
+ZorriegoEvosAttacks:
 	db 0; no more evolutions
 	dbw 1, EMBER
 	dbw 1, LEER

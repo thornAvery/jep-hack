@@ -107,7 +107,6 @@ AlphabeticalPokedexOrder:
 	dw FLUTTER_MANE
 	dw FOLAGE
 	dw FORRETRESS
-	dw FOXFIRE
 	dw FURRET
 	dw GASTLY
 	dw GAOTORA
@@ -399,5 +398,6 @@ AlphabeticalPokedexOrder:
 	dw YANMA
 	dw YANMEGA
 	dw ZAPDOS
+	dw ZORRIEGO
 	dw ZUBAT
 	assert_table_length NUM_POKEMON

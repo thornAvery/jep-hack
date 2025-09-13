@@ -272,7 +272,7 @@ AnimationIdlePointers:
 	dw SunfloraAnimationIdle
 	dw HippunkAnimationIdle
 	dw AercrowAnimationIdle
-	dw FoxfireAnimationIdle
+	dw ZorriegoAnimationIdle
 	dw YanmaAnimationIdle
 	dw YanmegaAnimationIdle
 	dw OniyanmaAnimationIdle

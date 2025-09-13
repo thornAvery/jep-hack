@@ -135,10 +135,25 @@ _CGB_FinishBattleScreenLayout:
 	lb bc, 5, 10
 	ld a, PAL_BATTLE_BG_PLAYER_HP
 	call FillBoxCGB
+; Zetacode, SGB mode should use hp color instead of XP
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBxp
+; End Zetacode 1
 	hlcoord 10, 11, wAttrmap
 	lb bc, 1, 9
 	ld a, PAL_BATTLE_BG_EXP
 	call FillBoxCGB
+; Zetacode 2
+	jr .please_continue
+
+.SGBxp	
+	hlcoord 10, 11, wAttrmap
+	lb bc, 1, 9
+	ld a, PAL_BATTLE_BG_PLAYER_HP
+	call FillBoxCGB
+.please_continue
+; End Zetacode 2
 	hlcoord 0, 12, wAttrmap
 	ld bc, 6 * SCREEN_WIDTH
 	ld a, PAL_BATTLE_BG_TEXT
@@ -237,6 +252,9 @@ _CGB_PokegearPals:
 	ret
 
 _CGB_StatsScreenHPPals:
+	ld a, [wOptions2]
+	and 1 << MENU_ACCOUNT
+	jr z, .SGBStats
 	ld de, wBGPals1
 	ld a, [wCurHPPal]
 	ld l, a
@@ -258,7 +276,28 @@ _CGB_StatsScreenHPPals:
 	ld a, BANK(wBGPals1)
 	call FarCopyWRAM
 	call WipeAttrmap
+	jr .contattrmap
+	
+.SGBStats
+	ld de, wBGPals1
+	ld a, [wCurHPPal]
+	ld l, a
+	ld h, 0
+	add hl, hl
+	add hl, hl
+	ld bc, HPBarPals
+	add hl, bc
+	call LoadPalette_White_Col1_Col2_Black ; hp palette
+	ld a, [wCurPartySpecies]
+	ld bc, wTempMonDVs
+	call GetPlayerOrMonPalettePointer
+	call LoadPalette_White_Col1_Col2_Black ; mon palette
+	;ld a, BANK(wBGPals1)
+	;call FarCopyWRAM
+	call WipeAttrmap
+	jr .contattrmapSGB
 
+.contattrmap
 	hlcoord 0, 0, wAttrmap
 	lb bc, 8, SCREEN_WIDTH
 	ld a, $1 ; mon palette
@@ -295,6 +334,18 @@ _CGB_StatsScreenHPPals:
 	ldh [hCGBPalUpdate], a
 	ret
 
+.contattrmapSGB
+	hlcoord 0, 0, wAttrmap
+	lb bc, 8, 9
+	ld a, $1 ; mon palette
+	call FillBoxCGB
+
+	call ApplyAttrmap
+	call ApplyPals
+	ld a, TRUE
+	ldh [hCGBPalUpdate], a
+	ret
+	
 StatsScreenPagePals:
 INCLUDE "gfx/stats/pages.pal"
 
@@ -960,6 +1011,9 @@ INCLUDE "gfx/trainer_card/badges.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_TrainerCardKanto:
@@ -1119,6 +1173,9 @@ INCLUDE "gfx/trainer_card/kanto_badges.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_MoveList:
@@ -1252,6 +1309,9 @@ INCLUDE "gfx/pack/pack_nb.pal"
 	call LoadHLOBPaletteIntoDE
 	dec b
 	jr nz, .ob_loop
+	; Fix Attribute map
+	call WipeAttrmap
+	call ApplyAttrmap
 	ret
 
 _CGB_Pokepic:
