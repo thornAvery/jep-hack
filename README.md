@@ -10,7 +10,7 @@ Using the Kanto Expansion Pak's original criteria, the ethos of the Johto Expans
 
 What falls under "Johto- and Kanto-related" is a Pokemon is the following, so long as they are, in fact, related:
 - Is a regional variant (Eg. Hisuian Sneasel)
-- Evolves from or into a Pokemon (eg. Tangrowth, Honchkrow)
+- Evolves from or into a Pokemon (eg. Tangrowth, Honchkrow; this includes Evolotto, a Pokemon from the RS Asset Leak that evolves into almost anything!)
 - Was cut from the final game (eg. Bellignan, Tricules, Phandarin; "beta" Pokemon) or cut from a future title while being related to a Kanto/Johto Pokemon (eg. Lizargun/Charmada)
 - Is a regional convergent (eg. Wugtrio, Toedscruel; "Okagyaradosu" qualifies for this)
 - Is a Paradox equivalent (eg. Walking Wake)
