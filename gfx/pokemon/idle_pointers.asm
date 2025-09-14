@@ -402,6 +402,7 @@ AnimationIdlePointers:
 	dw RuddernautAnimationIdle
 	dw PixytopAnimationIdle
 	dw MawtleAnimationIdle
+	dw EvolottoAnimationIdle
 	dw XylodonAnimationIdle
 	dw XylofinAnimationIdle
 	dw DokuroarAnimationIdle

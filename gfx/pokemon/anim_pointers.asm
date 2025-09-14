@@ -402,6 +402,7 @@ AnimationPointers:
 	dw RuddernautAnimation
 	dw PixytopAnimation
 	dw MawtleAnimation
+	dw EvolottoAnimation
 	dw XylodonAnimation
 	dw XylofinAnimation
 	dw DokuroarAnimation

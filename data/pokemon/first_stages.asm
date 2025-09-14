@@ -402,6 +402,7 @@ FirstEvoStages::
 	dw RUDDERNAUT
 	dw PIXYTOP
 	dw MAWTLE
+	dw EVOLOTTO
 	dw XYLODON
 	dw XYLODON
 	dw DOKUROAR

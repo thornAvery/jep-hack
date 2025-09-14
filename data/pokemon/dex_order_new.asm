@@ -368,6 +368,7 @@ NewPokedexOrder:
 	dw RUDDERNAUT
 	dw PIXYTOP
 	dw MAWTLE
+	dw EVOLOTTO
 	dw XYLODON
 	dw XYLOFIN
 	dw DOKUROAR

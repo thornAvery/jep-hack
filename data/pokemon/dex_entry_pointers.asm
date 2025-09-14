@@ -402,6 +402,7 @@ PokedexDataPointerTable:
 	dba RuddernautPokedexEntry
 	dba PixytopPokedexEntry
 	dba MawtlePokedexEntry
+	dba EvolottoPokedexEntry
 	dba XylodonPokedexEntry
 	dba XylofinPokedexEntry
 	dba DokuroarPokedexEntry

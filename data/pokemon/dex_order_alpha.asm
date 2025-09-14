@@ -103,6 +103,7 @@ AlphabeticalPokedexOrder:
 	dw ENTEI
 	dw ESPEON
 	dw EUCALA
+	dw EVOLOTTO
 	dw EXEGGCUTE
 	dw EXEGGUTOR
 	dw FARFETCH_D

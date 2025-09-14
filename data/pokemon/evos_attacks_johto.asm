@@ -176,6 +176,7 @@ EvosAttacksPointers2::
 	dw RuddernautEvosAttacks
 	dw PixytopEvosAttacks
 	dw MawtleEvosAttacks
+	dw EvolottoEvosAttacks
 	dw XylodonEvosAttacks
 	dw XylofinEvosAttacks
 	dw DokuroarEvosAttacks
@@ -3028,6 +3029,12 @@ MawtleEvosAttacks:
 	dbw 48, SUPER_FANG
 	dbw 54, CRUNCH
 	dbw 60, SKULL_BASH
+	db 0 ; no more level-up moves
+	
+EvolottoEvosAttacks:
+	dbbw EVOLVE_LEVEL, 1, EEVEE ; PLACEHOLDER
+	db 0 ; no more evolutions
+	dbw 1, HIDDEN_POWER
 	db 0 ; no more level-up moves
 
 XylodonEvosAttacks:

@@ -818,6 +818,8 @@ PokemonPicPointers::
 	dba PixytopBackpic
 	dba MawtleFrontpic
 	dba MawtleBackpic
+	dba EvolottoFrontpic
+	dba EvolottoBackpic
 	dba XylodonFrontpic
 	dba XylodonBackpic
 	dba XylofinFrontpic
