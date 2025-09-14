@@ -1123,6 +1123,8 @@ PixytopFrontpic:	 INCBIN "gfx/pokemon/pixytop/front.animated.2bpp.lz"
 PixytopBackpic: 	 INCBIN "gfx/pokemon/pixytop/back.2bpp.lz"
 MawtleFrontpic: 	 INCBIN "gfx/pokemon/mawtle/front.animated.2bpp.lz"
 MawtleBackpic:  	 INCBIN "gfx/pokemon/mawtle/back.2bpp.lz"
+EvolottoFrontpic: 	 INCBIN "gfx/pokemon/evolotto/front.animated.2bpp.lz"
+EvolottoBackpic:  	 INCBIN "gfx/pokemon/evolotto/back.2bpp.lz"
 AlphalithFrontpic:	 INCBIN "gfx/pokemon/alphalith/front.animated.2bpp.lz"
 AlphalithBackpic:	 INCBIN "gfx/pokemon/alphalith/back.2bpp.lz"
 

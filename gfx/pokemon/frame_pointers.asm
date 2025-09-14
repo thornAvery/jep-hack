@@ -402,6 +402,7 @@ FramesPointers:
 	dba RuddernautFrames
 	dba PixytopFrames
 	dba MawtleFrames
+	dba EvolottoFrames
 	dba XylodonFrames
 	dba XylofinFrames
 	dba DokuroarFrames

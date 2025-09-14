@@ -19,12 +19,12 @@ DebugPokemon1Script:
 
 DebugPokemon2Script:
 	opentext
-	getmonname STRING_BUFFER_3, FOLAGE
+	getmonname STRING_BUFFER_3, EVOLOTTO
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke FOLAGE, 31, RARE_CANDY
+	givepoke EVOLOTTO, 31, RARE_CANDY
 	closetext
 	end
 

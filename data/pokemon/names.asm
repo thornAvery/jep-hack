@@ -406,6 +406,7 @@ PokemonNames::
 	db "RUDDERNAUT"
 	db "PIXYTOP@@@"
 	db "MAWTLE@@@@"
+	db "EVOLOTTO@@"
 	db "XYLODON@@@"
 	db "XYLOFIN@@@"
 	db "DOKUROAR@@"

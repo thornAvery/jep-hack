@@ -441,4 +441,4 @@ MagnetitePokedexEntry::   INCLUDE "data/pokemon/dex_entries/magnetite.asm"
 MagnezonePokedexEntry::   INCLUDE "data/pokemon/dex_entries/magnezone.asm"
 GavillainPokedexEntry::   INCLUDE "data/pokemon/dex_entries/gavillain.asm"
 BuuPokedexEntry::   INCLUDE "data/pokemon/dex_entries/buu.asm"
-
+EvolottoPokedexEntry::    INCLUDE "data/pokemon/dex_entries/evolotto.asm"

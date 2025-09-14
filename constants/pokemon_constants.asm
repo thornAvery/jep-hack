@@ -423,6 +423,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const RUDDERNAUT
 	const PIXYTOP
 	const MAWTLE
+	const EVOLOTTO
 	const XYLODON
 	const XYLOFIN
 	const DOKUROAR

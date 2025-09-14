@@ -177,6 +177,7 @@ EggMovePointers2::
 	dw RuddernautEggMoves
 	dw PixytopEggMoves
 	dw MawtleEggMoves
+	dw NoEggMoves2 ; Evolotto
 	dw XylodonEggMoves
 	dw NoEggMoves2
 	dw NoEggMoves2 ; Dokuroar

@@ -407,6 +407,7 @@ PokemonCries::
 	mon_cry CRY_NIDORAN_M,     0,  128 ; RUDDERNAUT
 	mon_cry CRY_NIDORAN_M,     0,    0 ; PIXYTOP	(incomplete)
 	mon_cry CRY_NIDORAN_M,     0,    0 ; MAWTLE	(incomplete)
+	mon_cry CRY_NIDORAN_M,     0,    0 ; EVOLOTTO	(incomplete)
 	mon_cry CRY_NIDORAN_M,     0,  128 ; XYLODON
 	mon_cry CRY_NIDORAN_M,     0,  128 ; XYLOFIN
 	mon_cry CRY_METAPOD,     766,  566 ; DOKUROAR

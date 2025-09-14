@@ -402,6 +402,7 @@ BitmasksPointers:
 	dw RuddernautBitmasks
 	dw PixytopBitmasks
 	dw MawtleBitmasks
+	dw EvolottoBitmasks
 	dw XylodonBitmasks
 	dw XylofinBitmasks
 	dw DokuroarBitmasks
