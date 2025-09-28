@@ -8,12 +8,12 @@ DebugRoom_MapScripts:
 
 DebugPokemon1Script:
 	opentext
-	getmonname STRING_BUFFER_3, WARFURS
+	getmonname STRING_BUFFER_3, WEARLYCAN
 	writetext ReceivedDebugPokemonText
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke WARFURS, 23, RARE_CANDY
+	givepoke WEARLYCAN, 53, RARE_CANDY
 	closetext
 	end
 
@@ -39,11 +39,11 @@ DebugPokemon3Script:
 	faceplayer
 	opentext
 	writetext DebugTextA
-	cry BELLSPROUT
+	cry NIDOQUEEN
 	pause 15
 	closetext
-	loadvar VAR_BATTLETYPE, BATTLETYPE_INVERSE
-	loadwildmon BELLSPROUT, 10
+	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
+	loadwildmon NIDOQUEEN, 10
 	startbattle
 	reloadmapafterbattle
 	end
@@ -56,11 +56,11 @@ DebugPokemon4Script:
 	faceplayer
 	opentext
 	writetext DebugTextB
-	cry KLEAVOR
+	cry GOROCHU
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
-	loadwildmon KLEAVOR, 10
+	loadwildmon GOROCHU, 69
 	startbattle
 	reloadmapafterbattle
 	end
