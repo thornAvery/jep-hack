@@ -429,4 +429,5 @@ FramesPointers:
 	dba HyoshuYangFrames
 	dba HyoshuYinFrames
 	dba CelebiFrames
+	dba DeoxysFrames
 	assert_table_length NUM_POKEMON

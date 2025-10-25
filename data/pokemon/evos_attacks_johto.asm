@@ -202,6 +202,7 @@ EvosAttacksPointers2::
 	dw HyoshuYangEvosAttacks
 	dw HyoshuYinEvosAttacks
 	dw CelebiEvosAttacks
+	dw DeoxysEvosAttacks
 .IndirectEnd::
 
 ChikoritaEvosAttacks:
@@ -1021,8 +1022,8 @@ HoppipEvosAttacks:
 	dbw 17, STUN_SPORE
 	dbw 18, SLEEP_POWDER
 	dbw 22, LEECH_SEED
-	dbw 25, SLAM ; SW97
-	dbw 30, MEGA_DRAIN
+	dbw 25, MEGA_DRAIN
+	dbw 30, SLAM ; SW97
 	dbw 35, GROWTH ; SW97
 	dbw 39, RAZOR_LEAF ; SW97
 	dbw 45, COTTON_SPORE
@@ -1042,8 +1043,8 @@ SkiploomEvosAttacks:
 	dbw 17, STUN_SPORE
 	dbw 18, SLEEP_POWDER
 	dbw 24, LEECH_SEED
-	dbw 27, SLAM ; SW97
-	dbw 32, MEGA_DRAIN
+	dbw 27, MEGA_DRAIN
+	dbw 32, SLAM ; SW97
 	dbw 39, GROWTH ; SW97
 	dbw 43, RAZOR_LEAF ; SW97
 	dbw 49, COTTON_SPORE
@@ -1062,8 +1063,8 @@ JumpluffEvosAttacks:
 	dbw 17, STUN_SPORE
 	dbw 18, SLEEP_POWDER
 	dbw 24, LEECH_SEED
-	dbw 27, SLAM ; SW97
-	dbw 34, MEGA_DRAIN
+	dbw 27, MEGA_DRAIN
+	dbw 34, SLAM ; SW97
 	dbw 41, GROWTH ; SW97
 	dbw 47, RAZOR_LEAF ; SW97
 	dbw 53, COTTON_SPORE
@@ -3457,4 +3458,21 @@ CelebiEvosAttacks:
 	dbw 30, FUTURE_SIGHT
 	dbw 40, BATON_PASS
 	dbw 50, PERISH_SONG
+	db 0 ; no more level-up moves
+
+DeoxysEvosAttacks:
+db 0 ; no more evolutions
+	dbw 1, LEER
+	dbw 1, WRAP
+	dbw 9, NIGHT_SHADE
+	dbw 17, TELEPORT
+	dbw 25, CONFUSION
+	dbw 33, PURSUIT
+	dbw 41, PSYBEAM
+	dbw 49, COMET_PUNCH
+	dbw 57, PSYCHIC_M
+	dbw 65, SAFEGUARD
+	dbw 73, RECOVER
+	dbw 81, FUTURE_SIGHT
+	dbw 89, HYPER_BEAM
 	db 0 ; no more level-up moves

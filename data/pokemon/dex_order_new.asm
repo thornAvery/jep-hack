@@ -429,4 +429,5 @@ NewPokedexOrder:
 	dw MELTAN
 	dw MELMETAL
 	dw CELEBI
+	dw DEOXYS
 	assert_table_length NUM_POKEMON

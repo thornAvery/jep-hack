@@ -429,4 +429,5 @@ BitmasksPointers:
 	dw HyoshuYangBitmasks
 	dw HyoshuYinBitmasks
 	dw CelebiBitmasks
+	dw DeoxysBitmasks
 	assert_table_length NUM_POKEMON

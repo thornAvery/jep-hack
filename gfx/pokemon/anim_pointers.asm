@@ -428,4 +428,5 @@ AnimationPointers:
 	dw HyoshuYangAnimation
 	dw HyoshuYinAnimation
 	dw CelebiAnimation
+	dw DeoxysAnimation
 	assert_table_length NUM_POKEMON

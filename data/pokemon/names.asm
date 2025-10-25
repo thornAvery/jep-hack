@@ -432,4 +432,5 @@ PokemonNames::
 	db "HYOSHU@@@@"
 	db "HYOSHU@@@@"
 	db "CELEBI@@@@"
+	db "DEOXYS@@@@"
 	assert_table_length NUM_POKEMON

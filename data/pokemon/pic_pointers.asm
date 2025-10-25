@@ -870,4 +870,6 @@ PokemonPicPointers::
 	dba HyoshuYinBackpic
 	dba CelebiFrontpic
 	dba CelebiBackpic
+	dba DeoxysFrontpic
+	dba DeoxysBackpic
 	assert_table_length NUM_POKEMON + 1

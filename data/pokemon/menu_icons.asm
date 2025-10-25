@@ -429,4 +429,5 @@ MonMenuIcons:
 	db ICON_FOX         ; HYOSHU_YANG
 	db ICON_FOX         ; HYOSHU_YIN
 	db ICON_HUMANSHAPE  ; CELEBI
+	db ICON_HUMANSHAPE  ; DEOXYS
 	assert_table_length NUM_POKEMON

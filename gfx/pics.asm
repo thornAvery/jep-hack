@@ -1129,6 +1129,8 @@ BuuFrontpic:	INCBIN "gfx/pokemon/buu/front.animated.2bpp.lz"
 BuuBackpic:       INCBIN "gfx/pokemon/buu/back.2bpp.lz"
 GrenmarFrontpic:	INCBIN "gfx/pokemon/grenmar/front.animated.2bpp.lz"
 GrenmarBackpic:       INCBIN "gfx/pokemon/grenmar/back.2bpp.lz"
+DeoxysFrontpic: 	 INCBIN "gfx/pokemon/deoxys/front.animated.2bpp.lz"
+DeoxysBackpic:  	 INCBIN "gfx/pokemon/deoxys/back.2bpp.lz"
 ; spillover
 KabutopsFossilPic:   INCBIN "gfx/trainers/kabutops.2bpp.lz"
 AerodactylFossilPic: INCBIN "gfx/trainers/aerodactyl.2bpp.lz"
