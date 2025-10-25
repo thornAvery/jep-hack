@@ -428,4 +428,5 @@ PokedexDataPointerTable:
 	dba HyoshuYangPokedexEntry
 	dba HyoshuYinPokedexEntry
 	dba CelebiPokedexEntry
+	dba DeoxysPokedexEntry
 	assert_table_length NUM_POKEMON

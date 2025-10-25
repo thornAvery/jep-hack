@@ -428,4 +428,5 @@ AnimationIdlePointers:
 	dw HyoshuYangAnimationIdle
 	dw HyoshuYinAnimationIdle
 	dw CelebiAnimationIdle
+	dw DeoxysAnimationIdle
 	assert_table_length NUM_POKEMON

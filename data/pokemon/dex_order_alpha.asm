@@ -74,6 +74,7 @@ AlphabeticalPokedexOrder:
 	dw CYNDAQUIL
 	dw DECILLA
 	dw DELIBIRD
+	dw DEOXYS
 	dw DEWGONG
 	dw DIGLETT
 	dw DISTURBAN

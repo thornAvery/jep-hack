@@ -449,6 +449,7 @@ DEF JOHTO_POKEMON EQU const_value
 	const HYOSHU_YANG
 	const HYOSHU_YIN
 	const CELEBI     ; fb
+	const DEOXYS
 DEF NUM_POKEMON EQU const_value - 1
 
 DEF EGG EQU -3

@@ -454,4 +454,5 @@ INCLUDE "data/pokemon/base_stats/ho_oh.asm"
 INCLUDE "data/pokemon/base_stats/hyoshu_yang.asm"
 INCLUDE "data/pokemon/base_stats/hyoshu_yin.asm"
 INCLUDE "data/pokemon/base_stats/celebi.asm"
+INCLUDE "data/pokemon/base_stats/deoxys.asm"
 .IndirectEnd::

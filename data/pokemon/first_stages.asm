@@ -428,4 +428,5 @@ FirstEvoStages::
 	dw HYOSHU_YANG
 	dw HYOSHU_YIN
 	dw CELEBI
+	dw DEOXYS
 	assert_table_length NUM_POKEMON

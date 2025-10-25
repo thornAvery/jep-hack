@@ -2386,10 +2386,11 @@ KinglerEvosAttacks:
 	dbw 53, FLAIL ; FRLG
 	db 0 ; no more level-up moves
 
-VoltorbEvosAttacks: ; spark and twave should be here somewhere
+VoltorbEvosAttacks:
 	dbbw EVOLVE_LEVEL, 30, ELECTRODE
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, THUNDERSHOCK
 	dbw 7, SCREECH
 	dbw 12, THUNDER_WAVE ; SW97
 	dbw 17, SONICBOOM
@@ -2406,6 +2407,7 @@ VoltorbEvosAttacks: ; spark and twave should be here somewhere
 ElectrodeEvosAttacks:
 	db 0 ; no more evolutions
 	dbw 1, TACKLE
+	dbw 1, THUNDERSHOCK
 	dbw 7, SCREECH
 	dbw 12, THUNDER_WAVE ; SW97
 	dbw 17, SONICBOOM
@@ -3350,6 +3352,7 @@ EeveeEvosAttacks:
 	dbw 36, BATON_PASS
 	dbw 42, TAKE_DOWN
 	dbw 47, FOCUS_ENERGY ; RBY, GS
+	dbw 52, SWIFT ; LGPE
 	db 0 ; no more level-up moves
 
 VaporeonEvosAttacks:
