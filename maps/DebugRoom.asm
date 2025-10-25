@@ -13,7 +13,7 @@ DebugPokemon1Script:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke WEARLYCAN, 53, RARE_CANDY
+	givepoke WEARLYCAN, 53, MASTER_BALL
 	closetext
 	end
 
@@ -39,11 +39,11 @@ DebugPokemon3Script:
 	faceplayer
 	opentext
 	writetext DebugTextA
-	cry NIDOQUEEN
+	cry DEOXYS
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SHINY
-	loadwildmon NIDOQUEEN, 10
+	loadwildmon DEOXYS, 5
 	startbattle
 	reloadmapafterbattle
 	end
@@ -60,7 +60,7 @@ DebugPokemon4Script:
 	pause 15
 	closetext
 	loadvar VAR_BATTLETYPE, BATTLETYPE_SUICUNE
-	loadwildmon GOROCHU, 69
+	loadwildmon DEOXYS, 70
 	startbattle
 	reloadmapafterbattle
 	end

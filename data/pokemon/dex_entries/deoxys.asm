@@ -5,6 +5,6 @@
 	next "mutated space"
 	next "virus, the crystal"
 	
-	db   "in DEOXYS' chest"
+	page "in DEOXYS' chest"
 	next "is actually its"
 	next "brain.@"
